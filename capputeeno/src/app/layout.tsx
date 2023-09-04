@@ -1,5 +1,11 @@
+"use client";
+
+import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Saira } from "next/font/google";
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./theme";
+import { GlobalStyle } from "./globals";
 
 const saira = Saira({
   weight: ["300", "400", "500", "600"],
@@ -18,7 +24,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={saira.className}>{children}</body>
+      <body className={saira.className}>
+        <ThemeProvider theme={defaultTheme}>
+          <GlobalStyle />
+          <Header logoName="Capputeeno" />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

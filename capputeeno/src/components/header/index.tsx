@@ -1,3 +1,4 @@
+import { PrimaryInput } from "../primaryInput";
 import { Logo, TagHeader } from "./styles";
 import { Saira_Stencil_One } from "next/font/google";
 
@@ -17,7 +18,9 @@ export function Header({ logoName }: HeaderProps) {
         {logoName}
       </Logo>
 
-      <div></div>
+      <div>
+        <PrimaryInput />
+      </div>
     </TagHeader>
   );
 }

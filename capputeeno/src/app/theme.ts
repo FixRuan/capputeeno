@@ -1,5 +1,7 @@
 export const defaultTheme = {
   colors: {
-    logoColor: "#5D5D6D"
+    logoColor: "#5D5D6D",
+    bgSecondary: "#F3F5F6",
+    textDark: "#737380"
   }
 };
