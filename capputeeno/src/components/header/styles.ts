@@ -12,3 +12,9 @@ export const Logo = styled.a`
   font-size: 40px;
   line-height: 150%;
 `;
+
+export const HeaderInputWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 32px;
+`;

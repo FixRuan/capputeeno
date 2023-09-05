@@ -1,5 +1,6 @@
+import { CartControl } from "../cartControl";
 import { PrimaryInput } from "../primaryInput";
-import { Logo, TagHeader } from "./styles";
+import { HeaderInputWrapper, Logo, TagHeader } from "./styles";
 import { Saira_Stencil_One } from "next/font/google";
 
 const sairaStencilOne = Saira_Stencil_One({
@@ -18,9 +19,10 @@ export function Header({ logoName }: HeaderProps) {
         {logoName}
       </Logo>
 
-      <div>
+      <HeaderInputWrapper>
         <PrimaryInput />
-      </div>
+        <CartControl items={2} />
+      </HeaderInputWrapper>
     </TagHeader>
   );
 }
