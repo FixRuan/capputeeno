@@ -1,11 +1,13 @@
 import { SearchLupe } from "./search-loupe";
-import { InputContainer, PrimaryInputContainer } from "./styles";
+import { InputContainer, PrimaryInputContainer, SearchButton } from "./styles";
 
 export function PrimaryInput() {
   return (
     <InputContainer>
       <PrimaryInputContainer placeholder="Procurando por algo específico?" />
-      <SearchLupe />
+      <SearchButton>
+        <SearchLupe />
+      </SearchButton>
     </InputContainer>
   );
 }
