@@ -21,7 +21,7 @@ export function Header({ logoName }: HeaderProps) {
 
       <HeaderInputWrapper>
         <PrimaryInput />
-        <CartControl items={2} />
+        <CartControl />
       </HeaderInputWrapper>
     </TagHeader>
   );

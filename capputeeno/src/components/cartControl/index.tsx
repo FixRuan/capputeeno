@@ -1,16 +1,15 @@
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { ShoppingBag } from "./shoppingBag";
 import { CartContainer, CartItems } from "./styles";
 
-interface CartControlProps {
-  items?: number;
-}
+export function CartControl() {
+  const { value } = useLocalStorage("cartItems");
 
-export function CartControl({ items }: CartControlProps) {
   return (
     <CartContainer>
       <ShoppingBag />
 
-      {items && <CartItems>{items}</CartItems>}
+      {value != null && <CartItems>{value}</CartItems>}
     </CartContainer>
   );
 }
