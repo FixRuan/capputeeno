@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 
-
 export function useLocalStorage(item: string) {
   const [value, setValue] = useState<string>(() => {
     if (localStorage) {

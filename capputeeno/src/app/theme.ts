@@ -4,6 +4,7 @@ export const defaultTheme = {
     bgSecondary: "#F3F5F6",
     textDark: "#737380",
     notification: "#DE3838",
-    white: "#FFFFFF"
+    white: "#FFFFFF",
+    primary: "#FFA585"
   }
 };

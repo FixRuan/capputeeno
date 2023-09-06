@@ -4,7 +4,7 @@ export const TagHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 200px;
+  padding: 40px 160px;
 `;
 
 export const Logo = styled.a`
