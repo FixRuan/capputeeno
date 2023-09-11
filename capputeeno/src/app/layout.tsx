@@ -6,6 +6,7 @@ import { Saira } from "next/font/google";
 import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./theme";
 import { GlobalStyle } from "./globals";
+import { FilterContextProvider } from "@/context/filterContext";
 
 const saira = Saira({
   weight: ["300", "400", "500", "600"],
@@ -27,8 +28,12 @@ export default function RootLayout({
       <body className={saira.className}>
         <ThemeProvider theme={defaultTheme}>
           <GlobalStyle />
-          <Header logoName="Capputeeno" />
-          {children}
+
+          <FilterContextProvider>
+            <Header logoName="Capputeeno" />
+            {children}
+          </FilterContextProvider>
+
         </ThemeProvider>
       </body>
     </html>

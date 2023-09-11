@@ -20,6 +20,7 @@ export const FilterItem = styled.li<FilterItemsProps>`
   line-height: 22px;
   font-weight: ${({ selected }) => selected ? "600" : "400"};
   font-family: inherit;
+  cursor: pointer;
 
   ${({ selected, theme }) => selected && css`
     border-bottom: 4px solid ${theme.colors.primary};
