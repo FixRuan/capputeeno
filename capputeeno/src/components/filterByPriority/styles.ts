@@ -29,6 +29,7 @@ export const PriorityFilter = styled.ul`
   border-radius: 4px;
   padding: 12px 16px;
   top: 100%;
+  z-index: 10;
 
   list-style: none;
 
