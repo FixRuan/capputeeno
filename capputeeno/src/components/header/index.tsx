@@ -1,3 +1,4 @@
+import { useFilter } from "@/hooks/useFilter";
 import { CartControl } from "../cartControl";
 import { PrimaryInput } from "../primaryInput";
 import { HeaderInputWrapper, Logo, TagHeader } from "./styles";
@@ -13,6 +14,8 @@ interface HeaderProps {
 }
 
 export function Header({ logoName }: HeaderProps) {
+  const { setSearch, search } = useFilter();
+
   return (
     <TagHeader>
       <Logo className={sairaStencilOne.className}>
@@ -20,7 +23,11 @@ export function Header({ logoName }: HeaderProps) {
       </Logo>
 
       <HeaderInputWrapper>
-        <PrimaryInput />
+        <PrimaryInput
+          value={search}
+          handleChange={setSearch}
+          placeholder="Procurando por algo específico?"
+        />
         <CartControl />
       </HeaderInputWrapper>
     </TagHeader>

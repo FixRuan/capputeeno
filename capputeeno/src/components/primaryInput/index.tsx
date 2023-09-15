@@ -1,10 +1,16 @@
+import { InputHTMLAttributes } from "react";
 import { SearchLupe } from "./search-loupe";
 import { InputContainer, PrimaryInputContainer, SearchButton } from "./styles";
 
-export function PrimaryInput() {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  value: string;
+  handleChange: (value: string) => void;
+}
+
+export function PrimaryInput(props: InputProps) {
   return (
     <InputContainer>
-      <PrimaryInputContainer placeholder="Procurando por algo específico?" />
+      <PrimaryInputContainer onChange={(event) => props.handleChange(event.target.value)} {...props} />
       <SearchButton>
         <SearchLupe />
       </SearchButton>
